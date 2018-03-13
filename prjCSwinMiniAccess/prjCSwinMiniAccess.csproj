@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1286520D-AEA6-4B7D-9D3C-067D3AB9A1DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>prjCSwinMiniAccess</RootNamespace>
+    <AssemblyName>prjCSwinMiniAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDatabase.Designer.cs">
+      <DependentUpon>frmDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmRelations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmRelations.Designer.cs">
+      <DependentUpon>frmRelations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSelDb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSelDb.Designer.cs">
+      <DependentUpon>frmSelDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTable.Designer.cs">
+      <DependentUpon>frmTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmView.Designer.cs">
+      <DependentUpon>frmView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDatabase.resx">
+      <DependentUpon>frmDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmRelations.resx">
+      <DependentUpon>frmRelations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSelDb.resx">
+      <DependentUpon>frmSelDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTable.resx">
+      <DependentUpon>frmTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmView.resx">
+      <DependentUpon>frmView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Database_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add File_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="DAO">
+      <Guid>{00025E01-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Insert Table_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Insert Row_15px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Insert Row_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Insert Row_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit File_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Insert Row_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Index_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\access-2016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Issues.txt" />
+    <Content Include="mini-Access2018.ico" />
+    <None Include="Resources\Info_96px.png" />
+    <None Include="Resources\test1.png" />
+    <None Include="Resources\test.png" />
+    <None Include="Resources\Cancel_35px.png" />
+    <None Include="Resources\Delete_35px.png" />
+    <None Include="Resources\Cancel_25px1.png" />
+    <None Include="Resources\Minus_25px.png" />
+    <None Include="Resources\Lightning Bolt_25px.png" />
+    <None Include="Resources\Cancel_25px.png" />
+    <None Include="Resources\Delete Row_25px.png" />
+    <None Include="Resources\Insert Row_25px.png" />
+    <None Include="Resources\Add Database2_96px.png" />
+    <None Include="Resources\Database_96px1.png" />
+    <None Include="Resources\Door Opened_25px.png" />
+    <None Include="Resources\Add Link_48px.png" />
+    <None Include="Resources\Link_104px.png" />
+    <None Include="Resources\Door Opened_35px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

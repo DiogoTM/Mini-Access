@@ -1,0 +1,6 @@
+Button to delete table/index
+fix primary key thing
+Create view form
+autoincrease !!!!
+Validate index and fields names
+
